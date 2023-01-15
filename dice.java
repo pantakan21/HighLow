@@ -1,13 +1,27 @@
+package dice;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class dice {
     //Class Attribute
     private int diceValue[] = new int[4];
     private int sumDiceValue;
+
+    //Constructor Method
+    dice() {
+    }
+
+    dice(int diceValue[] , int sumDiceValue) {
+        this.diceValue[0] = diceValue[0];
+        this.diceValue[1] = diceValue[1];
+        this.diceValue[2] = diceValue[2];
+        this.diceValue[3] = diceValue[3];
+        this.sumDiceValue = sumDiceValue;
+    }
+    
     public static void main(String[] args) {
         //Local Attribute
         int choice , money , guess[];
-        
+
         while(true) {
             dice dice = new dice();
             person person = new person();
